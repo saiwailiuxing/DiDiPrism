@@ -1,14 +1,33 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    
+
+    ext {
+        agp_version = '8.7.3'
+        agp_version1 = '8.7.3'
+        agp_version2 = '8.7.3'
+        agp_version3 = agp_version2
+        agp_version4 = '8.2.1'
+        versions = [
+                compileSdkVersion  : 29,
+                minSdkVersion      : 16,
+                targetSdkVersion   : 29,
+                buildToolsVersion  : '28.0.3',
+                versionCode        : 1,
+                versionName        : '1.0',
+                sourceCompatibility: JavaVersion.VERSION_1_8,
+                targetCompatibility: JavaVersion.VERSION_1_8
+        ]
+        agp_version5 = agp_version2
+    }
     repositories {
         google()
+        mavenCentral()
         jcenter()
-        
+
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.6.1'
+        classpath "com.android.tools.build:gradle:$agp_version5"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -18,8 +37,15 @@ buildscript {
 allprojects {
     repositories {
         google()
+        mavenCentral()
         jcenter()
-        
+        maven {
+            allowInsecureProtocol true
+            url "http://maven.aliyun.com/nexus/content/groups/public/"
+        }
+        maven { url uri('../gradle_plugins') }
+        maven { url "https://plugins.gradle.org/m2/" }
+
     }
 }
 

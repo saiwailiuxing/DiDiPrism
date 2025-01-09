@@ -19,6 +19,7 @@ import com.xiaojuchefu.prism.monitor.model.EventData;
 import com.xiaojuchefu.prism.playback.PlaybackHelper;
 import com.xiaojuchefu.prism.playback.PrismPlayback;
 import com.xiaojuchefu.prism.playback.model.EventInfo;
+import com.xiaojuchefu.prism.R;
 
 import java.util.ArrayList;
 import java.util.List;

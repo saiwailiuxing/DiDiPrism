@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ListView;
+import com.xiaojuchefu.prism.R;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
